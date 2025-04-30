@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Acasă - Mașini</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('dealer.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            position: relative;
+        }
+
+        /* Link invizibil care acoperă întreaga pagină pentru a duce la 2page.html */
+        a#background-link {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: block;
+        }
+
+        /* Header - centrat pe verticală și orizontală */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Întreaga înălțime a ferestrei */
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .cta:hover {
+            background-color: #004080;
+        }
+
+        /* Main content */
+        main {
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Link invizibil care duce către 2page.html -->
+    <a href="2page.html" id="background-link"></a>
+
+    <header>
+        <h1>Bine ai venit la AutoWorld</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="despre.html">Despre</a></li>
+                <li><a href="modele.html">Modele</a></li>
+                <li><a href="servicii.html">Servicii</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h2>Descoperă viitorul mobilității</h2>
+                <a href="modele.html" class="cta">Vezi Modele</a>
+            </div>
+        </section>
+        <section>
+            <h2>Despre AutoWorld</h2>
+            <p>AutoWorld este locul ideal pentru pasionații de mașini. Oferim o gamă variată de modele de top și servicii de încredere pentru orice șofer.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AutoWorld</p>
+    </footer>
+</body>
+</html>
