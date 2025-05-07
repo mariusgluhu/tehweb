@@ -1,51 +1,41 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm');
-    const messageBox = document.getElementById('messageBox');
+$(document).ready(function () {
+    const form = $('#contactForm');
+    const messageBox = $('#messageBox');
 
-    form.addEventListener('submit', function (e) {
+    form.on('submit', function (e) {
         e.preventDefault();
-        const formData = new FormData(form);
+        const formData = form.serialize();
 
         // Resetează mesajul anterior
-        messageBox.style.display = 'none';
-        messageBox.classList.remove('success', 'error');
-        messageBox.textContent = '';
+        messageBox.hide().removeClass('success error').text('');
 
-        fetch('../contact.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            messageBox.style.display = 'block';
-            if (data.success) {
-                messageBox.classList.add('success');
-                messageBox.textContent = "Mesajul a fost trimis cu succes!";
-                form.reset();
-            } else {
-                messageBox.classList.add('error');
-                messageBox.textContent = data.message || "A apărut o eroare. Încercați din nou.";
+        $.ajax({
+            url: '../contact.php',
+            type: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                messageBox.show();
+                if (data.success) {
+                    messageBox.addClass('success').text('Mesajul a fost trimis cu succes!');
+                    form[0].reset();
+                } else {
+                    messageBox.addClass('error').text(data.message || 'A apărut o eroare. Încercați din nou.');
+                }
+
+                // Dispare după 5 secunde
+                setTimeout(function () {
+                    messageBox.hide().removeClass('success error').text('');
+                }, 3000);
+            },
+            error: function () {
+                messageBox.show().addClass('error').text('Eroare la trimitere.');
+
+                // Dispare după 5 secunde
+                setTimeout(function () {
+                    messageBox.hide().removeClass('success error').text('');
+                }, 3000);
             }
-
-            // Dispare după 5 secunde
-            setTimeout(() => {
-                messageBox.style.display = 'none';
-                messageBox.classList.remove('success', 'error');
-                messageBox.textContent = '';
-            }, 3000);
-        })
-        .catch(error => {
-            console.error(error);
-            messageBox.style.display = 'block';
-            messageBox.classList.add('error');
-            messageBox.textContent = "Eroare la trimitere.";
-
-            // Dispare după 5 secunde
-            setTimeout(() => {
-                messageBox.style.display = 'none';
-                messageBox.classList.remove('success', 'error');
-                messageBox.textContent = '';
-            }, 3000);
         });
     });
 });

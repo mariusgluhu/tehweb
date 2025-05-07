@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Contact - Nissan Hub</title>
     <link rel="stylesheet" href="css/6page.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="background">
