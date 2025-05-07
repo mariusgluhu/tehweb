@@ -153,3 +153,27 @@ h2 {
     margin: 5px 0;
     color: white;
 }
+
+
+#messageBox {
+    position: fixed;  /* Fixează mesajul în partea de sus a paginii */
+    top: 0;           /* Plasează mesajul chiar în partea de sus */
+    left: 0;
+    width: 100%;      /* Mesajul va acoperi toată lățimea paginii */
+    padding: 10px;    /* Spațiu pentru textul din mesaj */
+    background-color: #4CAF50; /* Fundal verde pentru succes */
+    color: white;     /* Text alb */
+    text-align: center;
+    font-size: 16px;
+    z-index: 9999;    /* Asigură-te că mesajul este deasupra altor elemente */
+    display: none;    /* Inițial, mesajul este ascuns */
+}
+
+#messageBox.error {
+    background-color: #f44336; /* Fundal roșu pentru eroare */
+}
+
+#messageBox.success {
+    background-color: #4CAF50; /* Fundal verde pentru succes */
+}
+

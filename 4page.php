@@ -14,12 +14,12 @@
         <h1>Nissan Hub</h1>
         <nav>
             <ul>
-                <li><a href="1start.html">Acasă</a></li>
-                <li><a href="2page.html">Despre</a></li>
-                <li><a href="3page.html">Modele</a></li>
-                <li><a href="4page.html" class="active">Servicii</a></li>
-                <li><a href="5page.html">Galerie</a></li>
-                <li><a href="6page.html">Contact</a></li>
+                <li><a href="index.php">Acasă</a></li>
+                <li><a href="2page.php">Despre</a></li>
+                <li><a href="3page.php">Modele</a></li>
+                <li><a href="4page.php" class="active">Servicii</a></li>
+                <li><a href="5page.php">Galerie</a></li>
+                <li><a href="6page.php">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="cta-container">
-            <button onclick="location.href='6page.html'">Contactează-ne pentru detalii</button>
+            <button onclick="location.href='6page.php'">Contactează-ne pentru detalii</button>
         </div>
     </main>
 </body>

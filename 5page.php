@@ -15,12 +15,12 @@
         <h1>Nissan Hub</h1>
         <nav>
             <ul>
-                <li><a href="1start.html">Acasă</a></li>
-                <li><a href="2page.html">Despre</a></li>
-                <li><a href="3page.html">Modele</a></li>
-                <li><a href="4page.html">Servicii</a></li>
-                <li><a href="5page.html" class="active">Galerie</a></li>
-                <li><a href="6page.html">Contact</a></li>
+                <li><a href="index.php">Acasă</a></li>
+                <li><a href="2page.php">Despre</a></li>
+                <li><a href="3page.php">Modele</a></li>
+                <li><a href="4page.php">Servicii</a></li>
+                <li><a href="5page.php" class="active">Galerie</a></li>
+                <li><a href="6page.php">Contact</a></li>
             </ul>
         </nav>
     </header>
