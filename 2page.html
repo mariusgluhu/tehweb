@@ -2,46 +2,53 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Acasă - Nissan Hub</title>
+    <title>Despre - Nissan Hub</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
+        html, body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #f4f4f4;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            line-height: 1.6;
             position: relative;
-            min-height: 100vh;
-            background-color: #121212;
-            overflow: hidden;
+            overflow-x: hidden;
+            background-color: transparent;
         }
 
         .background {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('logo.jpg') no-repeat center center fixed;
+            background: linear-gradient(rgba(60, 4, 4, 0.6), rgba(0, 0, 0, 0.6)), url('2despre.jpg') no-repeat center center fixed;
             background-size: cover;
-            filter: blur(3px) grayscale(50%);
             z-index: -1;
         }
 
         header {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 34px 50px;
+            padding: 30px 50px;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-            border-bottom: 2px solid #006ef5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            border-bottom: 2px solid #9f0000; /* Linie de separare între header și conținut */
+
         }
 
         h1 {
             margin: 0;
             font-size: 36px;
-            color: #006ef5;
+            color: #9f0000;
             font-weight: bold;
             letter-spacing: 2px;
         }
@@ -67,16 +74,16 @@
             position: absolute;
             width: 100%;
             height: 2px;
-            background-color: #006ef5;
+            background-color: #9f0000;
             bottom: -3px;
             left: 50%;
             transform: translateX(-50%) scaleX(0);
             transform-origin: center;
-            transition: transform 0.3s ease-out;
+            transition: transform 0.3s ease;
         }
 
         nav a:hover {
-            color: #006ef5;
+            color: #9f0000;
             transform: scale(1.1);
         }
 
@@ -90,63 +97,44 @@
 
         main {
             width: 80%;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 60px auto;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(7px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             text-align: center;
+            color: #fff;
         }
 
         section {
             padding: 25px;
-            margin-bottom: 40px;
-            background-color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.4);
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
             transition: all 0.3s ease;
         }
 
         section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
         }
 
         section h2 {
-            color: #006ef5;
-            font-size: 28px;
+            color: #cb0404;
+            font-size: 24px;
             margin-top: 0;
-            letter-spacing: 1px;
         }
 
-        .cta {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 15px 30px;
-            background-color: #006ef5;
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            border: 2px solid #006ef5;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .cta:hover {
-            background-color: #2e86f1;
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #f4f4f4;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        p {
+            color: #f0f0f0;
+            font-size: 16px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -157,8 +145,8 @@
         <h1>Nissan Hub</h1>
         <nav>
             <ul>
-                <li><a href="1start.html" class="active">Acasă</a></li>
-                <li><a href="2page.html">Despre</a></li>
+                <li><a href="1start.html">Acasă</a></li>
+                <li><a href="2page.html" class="active">Despre</a></li>
                 <li><a href="3page.html">Modele</a></li>
                 <li><a href="4page.html">Servicii</a></li>
                 <li><a href="5page.html">Galerie</a></li>
@@ -168,16 +156,13 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Descoperă viitorul mobilității</h2>
-            <a href="3page.html" class="cta">Vezi Modele</a>
-        </section>
         <section>
-            <h2>„Inovație. Putere. Libertate pe drum.” – Nissan</h2>
+            <h2>Despre Nissan</h2>
+            <p>Nissan este un brand japonez renumit pentru producția de autovehicule, fondat în 1933 și având sediul în Yokohama, Japonia.</p>
+            <p>Compania este cunoscută pentru gama sa variată de mașini, inclusiv modele de pasageri, SUV-uri, camioane ușoare și vehicule electrice.</p>
+            <p>Pe lângă mașinile pentru consumatori, Nissan este implicată și în producția de vehicule comerciale și de performanță, având divizii precum Nissan Nismo (pentru modele de performanță sportivă).</p>
+            <p>Nissan a avut un impact semnificativ în industria auto globală, fiind apreciat atât pentru fiabilitatea mașinilor sale, cât și pentru angajamentul față de mediu și sustenabilitate.</p>
         </section>
     </main>
-
-    <footer>
-    </footer>
 </body>
 </html>
